@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Galería - Red Dead Redemption II</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Cinzel', serif;
+    color:white;
+    background:linear-gradient(to bottom, #1a0000, #000000);
+}
+
+
+
+nav{
+    background:black;
+    padding:20px;
+    text-align:center;
+    border-bottom:3px solid #ff3b3b;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:20px;
+}
+
+nav a:hover{
+    color:#ff3b3b;
+}
+
+
+
+
+.titulo{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.titulo h1{
+    font-size:80px;
+    color:#ff3b3b;
+    text-shadow:4px 4px 10px black;
+}
+
+.titulo p{
+    max-width:900px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.8;
+}
+
+
+
+
+.texto-galeria{
+    text-align:center;
+    font-size:30px;
+    color:#ff3b3b;
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+    line-height:1.8;
+    text-shadow:2px 2px 10px black;
+}
+
+
+
+
+.galeria{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.galeria img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    margin:15px;
+    border:3px solid #ff3b3b;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.1);
+    box-shadow:0px 0px 20px red;
+}
+
+
+
+
+#lightbox{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+#lightbox img{
+    width:80%;
+    max-width:900px;
+    border:4px solid #ff3b3b;
+    border-radius:10px;
+}
+
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    border-top:3px solid #ff3b3b;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<nav>
+    <a href="RDR1.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="personajes.html">Personajes</a>
+    <a href="galeria.html">Galería</a>
+</nav>
+
+
+
+<section class="titulo">
+
+    <h1>GALERÍA</h1>
+
+    <p>
+        Momentos inolvidables del salvaje oeste: paisajes, aventuras,
+        acción y la vida de la banda Van der Linde.
+    </p>
+
+</section>
+
+
+
+<p class="texto-galeria">
+
+    “Todos intentamos sobrevivir, cada uno a su manera.”
+    — Arthur Morgan
+
+</p>
+
+
+
+<section class="galeria">
+
+    <img src="img/paisaje1.jpg" onclick="abrir(this.src)">
+    <img src="img/paisaje2.jpg" onclick="abrir(this.src)">
+    <img src="img/caballo.jpg" onclick="abrir(this.src)">
+    <img src="img/tiroteo.jpg" onclick="abrir(this.src)">
+    <img src="img/campamento.jpg" onclick="abrir(this.src)">
+    <img src="img/atardecer.jpg" onclick="abrir(this.src)">
+
+</section>
+
+
+
+<div id="lightbox" onclick="cerrar()">
+
+    <img id="imgGrande">
+
+</div>
+
+<footer>
+
+    © 2026 - Galería Red Dead Redemption II
+
+</footer>
+
+<script>
+
+function abrir(src){
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    document.getElementById("imgGrande").src = src;
+
+}
+
+function cerrar(){
+
+    document.getElementById("lightbox").style.display = "none";
+
+}
+
+</script>
+
+</body>
+
+</html>

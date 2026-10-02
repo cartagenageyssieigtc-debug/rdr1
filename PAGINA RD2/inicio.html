@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Red Dead Redemption II</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cinzel', serif;
+    overflow-x:hidden;
+    color:white;
+    background:black;
+}
+
+/* VIDEO FONDO */
+
+video{
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+    position:fixed;
+    top:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(4px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:35px;
+    color:#d62828;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.4s;
+}
+
+.nav-links a:hover{
+    color:#d62828;
+    text-shadow:0 0 10px red;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:1000px;
+}
+
+.hero h1{
+    font-size:95px;
+    margin-bottom:25px;
+    text-shadow:5px 5px 20px black;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:1.8;
+    margin-bottom:40px;
+    text-shadow:2px 2px 10px black;
+}
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    border:2px solid #d62828;
+    padding:15px 35px;
+    font-size:18px;
+    transition:0.4s;
+    background:rgba(0,0,0,0.5);
+}
+
+.btn:hover{
+    background:#d62828;
+    transform:scale(1.08);
+    box-shadow:0 0 20px red;
+}
+
+/* INFO */
+
+.info{
+    width:100%;
+    background:rgba(0,0,0,0.88);
+    padding:100px 60px;
+}
+
+.info h2{
+    text-align:center;
+    font-size:55px;
+    color:#d62828;
+    margin-bottom:40px;
+}
+
+.info p{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    font-size:21px;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:60px;
+}
+
+.galeria img{
+    width:350px;
+    height:220px;
+    object-fit:cover;
+    border:3px solid #d62828;
+    transition:0.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px red;
+}
+
+/* VIDEO */
+
+.video{
+    display:flex;
+    justify-content:center;
+    margin-top:70px;
+}
+
+iframe{
+    width:900px;
+    height:500px;
+    border:4px solid #d62828;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:30px;
+    color:#888;
+}
+
+</style>
+</head>
+<body>
+
+<!-- VIDEO DE FONDO -->
+
+<video autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-horse-riding-in-the-desert-1560087997716?download=1080p" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        RDR II
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">Inicio</a></li>
+
+        <li><a href="historia.html">Historia</a></li>
+
+        <li><a href="personajes.html">Personajes</a></li>
+
+        <li><a href="galeria.html">Galería</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>RED DEAD REDEMPTION II</h1>
+
+        <p>
+            Vive la historia de Arthur Morgan y la banda Van der Linde
+            mientras sobreviven en el salvaje oeste americano de 1899.
+            Explora paisajes impresionantes, enfrentamientos intensos
+            y una aventura inolvidable.
+        </p>
+
+        <div class="botones">
+
+            <a href="historia.html" class="btn">
+                Historia
+            </a>
+
+            <a href="personajes.html" class="btn">
+                Personajes
+            </a>
+
+            <a href="galeria.html" class="btn">
+                Galería
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INFORMACION -->
+
+<section class="info">
+
+    <h2>EL VIEJO OESTE</h2>
+
+    <p>
+        Red Dead Redemption 2 es un videojuego desarrollado por Rockstar Games.
+        Ambientado en 1899, sigue la vida de Arthur Morgan, un forajido de la
+        banda Van der Linde que lucha por sobrevivir mientras el viejo oeste
+        desaparece lentamente.
+    </p>
+
+    <!-- GALERIA -->
+
+    <div class="galeria">
+
+        <img src="https://images6.alphacoders.com/909/909641.jpg">
+
+        <img src="https://images4.alphacoders.com/909/909660.jpg">
+
+        <img src="https://images8.alphacoders.com/958/958091.jpg">
+
+    </div>
+
+    <!-- VIDEO -->
+
+    <div class="video">
+
+        <iframe
+        src="https://www.youtube.com/embed/eaW0tYpxyp0"
+        title="RDR2 Trailer"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 - Red Dead Redemption II Fan Page
+
+</footer>
+
+</body>
+</html>
